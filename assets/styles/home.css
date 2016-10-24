@@ -1,0 +1,48 @@
+body {
+  background-color: cornsilk;
+  font-family: sans-serif;
+}
+
+header {
+  height: 300px;
+}
+
+#header_background {
+  background-color: #dcdcdc;
+  opacity: 0.6;
+  height: 300px;
+}
+
+#header_content {
+  position: absolute;
+  top: 1em;
+  text-align: center;
+  width: 100%;
+}
+
+#content {
+  width: 600px;
+}
+
+.inline_elements {
+  display: inline-block;
+  height: 800px;
+  margin: 3px auto;
+}
+
+aside {
+  width: 150px;
+  position: fixed;
+  top: 0;
+}
+
+#main {
+  width: 400px;
+  margin-left: 350px;
+}
+
+li {
+  margin: 2em auto;
+  font-size: 18pt;
+}
+
