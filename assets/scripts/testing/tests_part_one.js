@@ -82,7 +82,17 @@ var t = {
     },
     {
       title: 'A fuction with two parameters',
-      prompt: ''
+      prompt: 'There should be a function called longestString that takes two strings as parameters. When invoked, it should return the string that is the longest of the two. If they are equal length, return a string that says "Equal"',
+      target: 'longestString',
+      type: 'func',
+      expected: 'Jackie O'
+    },
+    {
+      title: 'Another function with two parameters',
+      prompt: 'There should be a function sum that takes two numbers and returns the sum of those two numbers',
+      target: 'sum',
+      type: 'func',
+      expected: 36
     }
   ]
 };
