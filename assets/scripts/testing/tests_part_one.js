@@ -80,5 +80,9 @@ var t = {
       type: 'func',
       expected: 'Hello'
     },
+    {
+      title: 'A fuction with two parameters',
+      prompt: ''
+    }
   ]
 };
