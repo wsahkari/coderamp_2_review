@@ -1,5 +1,20 @@
 'use strict';
-
+/*
+* It is expected that each tests is an array of test objects,
+* each with the following structure:
+* {
+    title: ,
+    prompt: ,
+    target: ,
+    type: ,
+    expected:
+  }
+* Where title is the test title
+* prompt is the test prompt
+* target is the varibale or function name
+* type is either 'var' representing a variable or 'func' representing function and
+* expected is the value expected to be held in the variable or returned from the function
+*/
 function TestUtils(tests) {
   var tests = tests;
   var testUtils = {
