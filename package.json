@@ -1,0 +1,23 @@
+{
+  "name": "coderamp_2_review",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "eslint assets/scripts/responses/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsmed/coderamp_2_review.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itsmed/coderamp_2_review/issues"
+  },
+  "homepage": "https://github.com/itsmed/coderamp_2_review#readme",
+  "devDependencies": {
+    "eslint": "^3.8.1"
+  }
+}

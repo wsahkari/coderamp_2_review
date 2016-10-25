@@ -3,6 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>JS One</title>
+  <style>
+    #tests {
+      height: 500px;
+    }
+    #main {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -18,13 +26,25 @@
       </ul>
   </aside>
   <div id="main">
-    <h2>Link the part_one.js file to this html file using script tags and follow the prompts!</h2>
-    <h3>Make sure you link part_one.js <i>under</i> all of the other script tags!</h3>
+    <h1>Variables, Functions, and Strings</h1>
+    <h2>Make a file called part_one_responses.js assets/scripts/responses.</h2>
+    <h2>Link the part_one_responses.js file to this html file using script tags and follow the prompts!</h2>
+    <h3>Make sure you link part_one_responses.js <i>above</i> all of the other script tags!</h3>
+  </div>
+  <div id="test_count"></div>
+  <div>
+    <h2 id="test_title"></h2>
   </div>
   <div id="tests"></div>
   <footer>
 
   </footer>
+  <script src="../scripts/responses/ass.js"></script>
+  <script src="../scripts/test_utils.js"></script>
   <script src="../scripts/tests_part_one.js"></script>
+  <script>
+    var testUtils = new TestUtils(t);
+    testUtils.testRunner();
+  </script>
 </body>
 </html>

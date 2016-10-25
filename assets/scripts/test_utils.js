@@ -6,6 +6,7 @@ function TestUtils(tests) {
     testRunner: function() {
       this.showTestCount(tests);
       if (tests.currentTest < tests.units.length) {
+        this.showTestTitle(tests.units[tests.currentTest]);
         this.checkAnswer(tests.units[tests.currentTest], tests);
       } else {
         this.congratulate();
@@ -13,7 +14,7 @@ function TestUtils(tests) {
     },
 
     sendNotAFunctionError: function(test) {
-      this.sendMessage(`Expected ${test.target} to be a function, but instead got ${typeof window[test['target']]}.`, 'red')
+      this.sendMessage(`Expected ${test.target} to be a function, but instead got ${typeof window[test['target']]}.`, 'red');
     },
 
     checkAnswerInVariable: function(test) {
@@ -34,13 +35,24 @@ function TestUtils(tests) {
       }
     },
 
+    clearTestTitle: function() {
+      document.getElementById('test_title').textContent = '';
+    },
+
+    showTestTitle: function(test) {
+      var title = document.createElement('h2');
+      title.textContent = test.title;
+      // this.clearTestTitle();
+      document.getElementById('test_title').appendChild(title);
+    },
+
     checkAnswer: function(test, tests) {
       if (test.type === 'var') {
         this.checkAnswerInVariable(test, tests);
       }
       if (test.type === 'func') {
         if (typeof window[test['target']] !== 'function') {
-          return this.sendNotAFunctionError(test)
+          return this.sendNotAFunctionError(test);
         }
         this.checkFunctionAnswer(test, tests);
       }
@@ -57,6 +69,7 @@ function TestUtils(tests) {
     },
 
     congratulate: function() {
+      this.clearTestTitle();
       this.sendMessage('That\'s it!', 'green');
     },
 
@@ -72,6 +85,6 @@ function TestUtils(tests) {
       var newMessage = this.makeElement(message, color);
       document.getElementById('tests').prepend(newMessage);
     }
-  }
+  };
   return testUtils;
 }
