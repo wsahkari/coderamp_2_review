@@ -1,6 +1,6 @@
 'use strict';
 
-var t = {
+var partOneTests = {
   currentTest: 0,
   units: [
     {
