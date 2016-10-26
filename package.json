@@ -19,5 +19,6 @@
   "homepage": "https://github.com/itsmed/coderamp_2_review#readme",
   "devDependencies": {
     "eslint": "^3.8.1"
-  }
+  },
+  "dependencies": {}
 }

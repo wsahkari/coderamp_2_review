@@ -15,14 +15,25 @@
         <li><a href="./css_review.html">CSS</a></li>
         <li><a href="./js_review_one.html">JS One</a></li>
         <li><a href="#">JS Two</a></li>
+        <li><a href="./bonus_round.html">Bonus Round!</a></li>
       </ul>
     </nav>
   </aside>
   <div id="main">
-
+    <div id="test_count"></div>
+  <div>
+    <h2 id="test_title"></h2>
+  </div>
+  <div id="tests"></div>
   </div>
   <footer>
 
   </footer>
+  <script src="../scripts/testing/tests_part_two.js"></script>
+  <script src="../scripts/testing/test_utils.js"></script>
+  <script>
+    var testUtils = new TestUtils(partTwoTests);
+    testUtils.testRunner();
+  </script>
 </body>
 </html>
