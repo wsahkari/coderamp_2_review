@@ -66,13 +66,13 @@ describe('beast mode', function() {
     });
   });
 
-  describe('isEven', function() {
+  describe('isOdd', function() {
     it('should be a function', function () {
-      expect(typeof isEven).to.be('function');
+      expect(typeof isOdd).to.be('function');
     });
     it('should take a number and return true if the number is even, false if it is odd', function () {
-      expect(isEven(8)).to.be(true);
-      expect(isEven(9)).to.be(false);
+      expect(isOdd(9)).to.be(true);
+      expect(isOdd(8)).to.be(false);
     });
   });
 
@@ -118,14 +118,14 @@ describe('beast mode', function() {
 
       it('should return a new array without modifing the input array', function() {
         var arr = [1, 2, 3, 4];
-        var filtered = myFilter(arr, isEven);
+        var filtered = myFilter(arr, isOdd);
         expect(arr).to.contain(1, 2, 3, 4);
       });
 
-      it('should return a new array with values that pass the truth test (function that was passed in). So, myFilter([1, 2, 3], isEven) should return [2]', function () {
+      it('should return a new array with values that pass the truth test (function that was passed in). So, myFilter([1, 2, 3], isOdd) should return [2]', function () {
         var arr = [1, 2, 3, 4, 5, 6];
-        var filtered = myFilter(arr, isEven);
-        expect(filtered).to.contain(2, 4, 6);
+        var filtered = myFilter(arr, isOdd);
+        expect(filtered).to.contain(1, 3, 5);
       });
     });
 
