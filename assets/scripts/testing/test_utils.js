@@ -42,7 +42,7 @@ function TestUtils(tests) {
     },
 
     checkFunctionAnswer: function(test, tests) {
-      if ( (window[test['target']]() === test.expected) || (window[test['target']]('Jim') === test.expected) || ((window[test['target']]('Jane', 'Jackie O') === test.expected)) || ((window[test['target']](12, 24) === test.expected)) || ((window[test['target']]([1, 2, 3, 4, 5]) === test.expected)) || (windw[test['target']](5) === expected) ) {
+      if ( (window[test['target']]() === test.expected) || (window[test['target']]('Jim') === test.expected) || ((window[test['target']]('Jane', 'Jackie O') === test.expected)) || (window[test['target']](5) === test.expected) || ((window[test['target']](12, 24) === test.expected)) || ((window[test['target']]([1, 2, 3, 4, 5]) === test.expected)) ) {
         this.incrementTestCount(tests);
         this.testRunner(tests);
       } else {
